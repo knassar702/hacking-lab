@@ -22,8 +22,9 @@ cd blog-flask
 
 First time see this web app? please run the following commands to init database:
 
-```sh 
-$ from server import init_db
+```sh
+python
+$ from flaskr import init_db
 $ init_db()
 ```
 
