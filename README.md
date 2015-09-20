@@ -8,18 +8,30 @@ To use this theme, choose one of the following options to get started:
 * Download the latest release on Start Bootstrap
 * Fork this repository on GitHub
 
-## Bugs and Issues
+## Flask Usage:
 
-Have a bug or an issue with this theme? [Open a new issue](https://github.com/IronSummitMedia/startbootstrap-clean-blog/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/).
+- Install python 2.7
+- Install python-pip
+- Install flask: `pip install flask`
+- Clone this repo
 
-## Creator
+```sh
+git clone https://github.com/ducnc/blog-flask.git
+cd blog-flask
+```
 
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
+First time see this web app? please run the following commands to init database:
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+```sh 
+$ from server import init_db
+$ init_db()
+```
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+Now you are ready to go:
+
+$ python flaskr.py
+
+Go to http://127.0.0.1:5000/login with admin/default and enjoin it
 
 ## Copyright and License
 
