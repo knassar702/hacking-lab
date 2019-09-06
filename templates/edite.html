@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+<html>
+<head></head>
+<body>
+    {% for entry in entries %}
+    <form action="/login/ok/{{ entry.id }}" method=post>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title value="{{ entry.title }}">
+        <dt>Description:</dt>
+        <dd><textarea name="description" rows="10" cols="5">{{ entry.description }}</textarea></dd>
+        <dt>Text:
+        <dd><textarea name=text size=3 rows=10 cols=5 >{{ entry.text }}</textarea>
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
+     {% endfor %}
+  {% endif %}
+{% endblock %}
+</body>
+</html>

@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Duc's Blog</title>
+    <title>{{ Name }}</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -20,9 +20,9 @@
     <link href="../static/css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts> -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!--link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <!--link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,16 +52,17 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="{{ url_for('index') }}">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li>
-                        <a href="{{ url_for('posts') }}">Blog</a>
+                        <a href="../about">About</a>
                     </li>
                     <li>
-                        <a href="{{ url_for('about') }}">About</a>
+                        <a href="../contact">Contact</a>
                     </li>
                     <li>
-                        <a href="{{ url_for('contact') }}">Contact</a>
+                        <a href="../login"> Login </a>
+                    </li>
                     </li>
                 </ul>
             </div>
@@ -77,7 +78,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>DucNC's Blog</h1>
+                        <h1>{{ Name }}</h1>
                         <hr class="small">
                     </div>
                 </div>
@@ -99,7 +100,7 @@
                             {{ entry.description|safe }}
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Ducnc</a> on September 24, 2014</p>
+                    <p class="post-meta">Posted by <a href="#">Khaled</a> on {{ entry.d }}</p>
                 </div>
                 {% endfor %}
                 <hr>
@@ -108,7 +109,7 @@
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <a href="/posts">Older Posts &rarr;</a>
                     </li>
                 </ul>
             </div>
@@ -125,7 +126,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                         <li>
-                            <a href="https://twitter.com/ducnc92">
+                            <a href="https://twitter.com/KhaledN61578686">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -141,7 +142,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/ducnc">
+                            <a href="https://github.com/knassar702">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -150,7 +151,7 @@
                         </li>
                     </ul>
                     <p class="copyright">Flask Framework & Theme by Start Bootstrap</p>
-                    <p class="copyright text-muted">Copyright &copy; ducnc 2015</p>
+                    <p class="copyright text-muted">Copyright &copy; Khaled Nassar 2019</p>
                 </div>
             </div>
         </div>
