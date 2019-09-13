@@ -1,8 +1,5 @@
-{% extends "layout.html" %}
-{% block body %}
-  {% if session.user %}
-<html>
-
+<html>  
+<head>  
 <head>
 
     <meta charset="utf-8">
@@ -31,24 +28,11 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
-<body>
-    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
-      <dl>
-        <dt>Title:
-        <dd><input type=text size=30 name=title>
-        <dt>Description:</dt>
-        <dd><textarea name="description" rows="2" cols="40"></textarea></dd>
-        <dt>Text:
-        <dd><textarea name=text rows=5 cols=40></textarea>
-        <dd><input type=submit value=Share>
-      </dl>
-    </form>
-        <hr><br><h2>POSTS : </h2>
-     {% for entry in entries %}
-      <a href="/login/edite/{{ entry.id }}"><h3>{{ entry.title }} </h3><p> | Edit | </p></a>
-     {% endfor %}
-  {% endif %}
-{% endblock %}
-</body>
-</html>
+</head>  
+<body>  
+    <form action = "/success" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" />  
+        <input type = "submit" value="Upload">  
+    </form>  
+</body>  
+</html>  

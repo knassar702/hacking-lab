@@ -52,13 +52,22 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="../index.html">Home</a>
+                        <a href="../website?u=http://127.0.0.1">Home</a>
+                    </li>
+                    <li>
+                        <a href="../img"> All Uploads </a>
+                    </li>
+                    <li>
+                        <a href="../upload">Upload Photo</a>
                     </li>
                     <li>
                         <a href="../about">About</a>
                     </li>
                     <li>
-                        <a href="../contact">Contact</a>
+                        <a href="../search">Search</a>
+                    </li>
+                    <li>
+                        <a href="../redirect?url=http://127.0.0.1/contact">Contact</a>
                     </li>
                     <li>
                         <a href="../login"> Login </a>
@@ -85,7 +94,6 @@
             </div>
         </div>
     </header>
-
     <!-- Main Content -->
     <div class="container">
         <div class="row">
@@ -100,7 +108,7 @@
                             {{ entry.description|safe }}
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Khaled</a> on {{ entry.d }}</p>
+                    <p class="post-meta">Posted by <a href="#">admin</a> on {{ entry.d }}</p>
                 </div>
                 {% endfor %}
                 <hr>
@@ -130,14 +138,6 @@
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://facebook.com/nguyencongduc">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </li>
