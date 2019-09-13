@@ -28,8 +28,8 @@ $ git clone https://github.com/knassar702/hacking-lab && cd hacking-lab
 $ python2 hackme.py
 `````
 # Login Page :
--UserName : admin
--Password : p@ssword
+*UserName : admin
+*Password : p@ssword
 
 # Get all vulnerabilitys List For win
 
