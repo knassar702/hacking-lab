@@ -1,22 +1,40 @@
 # Hacking-Lab
 
-<h4> Hack this site using : [xss,upload file,ssrf,ssti,os cmd injection,bruteforce,sql injection]
+Hack this site using :  xss , ssrf , command injection , open redirect , Server Side Template Injection (SSTI) , upload file
 
+Coded By khaled Nassar @knassar702
 
-# Coded By : Khaled Nassar @knassar702
+# Requirements :
+- python2
+- flask module
+- jinja2 Template
 
-# For Run :
+# install requirements (Linux) :
 
 ````
-$ apt install python
-````
-````
-$ pip install flask jinja2
-````
-````
-$ python hackme.py
+$ apt install python2
 ````
 
-# Found all vulnerability list For Win :)
+````
+$ apt install python2-pip
+````
 
-<h4> Good Luck </h4>
+````
+$ pip2 install flask
+````
+
+````
+$ pip2 install jinja2
+````
+
+# Run It :
+
+````
+$ git clone https://github.com/knassar702/hacking-lab && cd hacking-lab
+````
+
+````
+$ chmod +x install.sh && ./install.sh && python2 app.py
+`````
+
+# Note : This BETA Version
