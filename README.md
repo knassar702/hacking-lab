@@ -1,6 +1,6 @@
 # Hacking-Lab
 
-<h4> Hack this site using : [xss,upload file,ssrf,ssti,os cmd injection,bruteforce
+<h4> Hack this site using : [xss,upload file,ssrf,ssti,os cmd injection,bruteforce,sql injection]
 
 
 # Coded By : Khaled Nassar @knassar702
