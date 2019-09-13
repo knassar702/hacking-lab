@@ -25,7 +25,7 @@ $ pip2 install jinja2
 $ git clone https://github.com/knassar702/hacking-lab && cd hacking-lab
 ````
 ````
-$ python2 app.py
+$ python2 hackme.py
 `````
 
 # Get all vulnerabilitys List For win
