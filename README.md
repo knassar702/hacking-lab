@@ -32,6 +32,12 @@ $ python2 hackme.py
 UserName : admin <br>
 Password : p@ssword
 
-# Get all vulnerabilitys List For win
+path traversal & XSS Stored : http://localhost/upload
+SQLI : http://localhost/posts/{ID}
+SSTI & XSS : http://localhost/search
+CSRF : http://localhost/login/edite/42
+SSRF & RCE : http://localhost/website?u=http://127.0.0.1
+open redirect : http://localhost/redirect?url=http://127.0.0.1/contact
+
 
 <h4> Good Luck :)</h4>
