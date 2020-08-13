@@ -1,6 +1,12 @@
 # Hacking-Lab
 
-<h4>Hack this site using :  [xss , ssrf ,sql injection , command injection , open redirect , Server Side Template Injection (SSTI) , upload file]</h4>
+
+* path traversal & XSS Stored : http://localhost/upload
+* SQLI : http://localhost/posts/{ID}
+* SSTI & XSS : http://localhost/search
+* CSRF : http://localhost/login/edite/42
+* SSRF & RCE : http://localhost/website?u=http://127.0.0.1
+* open redirect : http://localhost/redirect?url=http://127.0.0.1/contact
 
 Coded By khaled Nassar @knassar702
 
@@ -31,13 +37,6 @@ $ python2 hackme.py
 
 UserName : admin <br>
 Password : p@ssword
-
-* path traversal & XSS Stored : http://localhost/upload
-* SQLI : http://localhost/posts/{ID}
-* SSTI & XSS : http://localhost/search
-* CSRF : http://localhost/login/edite/42
-* SSRF & RCE : http://localhost/website?u=http://127.0.0.1
-* open redirect : http://localhost/redirect?url=http://127.0.0.1/contact
 
 
 <h4> Good Luck :)</h4>
