@@ -57,7 +57,6 @@ def index():
     cur = g.db.execute('select id, title, description, date from entries order by id desc limit 8')
     a = cur.fetchall()
     entries = [dict(id=row[0],title=row[1], description=row[2],d=row[3]) for row in a]
-    print entries
     response=make_response(render_template('index.html',entries=entries,Name=name))
     response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
     response.headers['X-Content-Type-Options'] = 'nosniff'
