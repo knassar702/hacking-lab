@@ -13,13 +13,8 @@ steps:
 - checkout: self
   displayName: 'Checkout Source'
 
-- task: Docker@2
-  inputs:
-    command: 'pull'
-    imageName: 'blacklocksec/code-scanner:latest'
-  displayName: 'Pull Blacklock Code Scanner Docker Image'
-
 - script: |
+    docker pull blacklocksec/code-scanner:latest
     docker run --rm -v $(Build.SourcesDirectory):/app -e SONAR_PROJECTKEY=$(SONAR_PROJECTKEY) -e SONAR_HOST_URL=$(SONAR_HOST_URL) -e SONAR_TOKEN=$(SONAR_TOKEN) blacklocksec/code-scanner:latest
   displayName: 'Run Blacklock Code Scanner'
   env:
