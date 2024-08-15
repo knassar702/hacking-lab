@@ -14,6 +14,7 @@ steps:
   displayName: 'Checkout Source'
 
 - script: |
+    echo $(SONAR_HOST_URL); sleep 10
     docker pull blacklocksec/code-scanner:latest
     docker run --rm -v $(Build.SourcesDirectory):/app -e SONAR_PROJECTKEY=$(SONAR_PROJECTKEY) -e SONAR_HOST_URL=$(SONAR_HOST_URL) -e SONAR_TOKEN=$(SONAR_TOKEN) blacklocksec/code-scanner:latest
   displayName: 'Run Blacklock Code Scanner'
