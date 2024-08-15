@@ -1,0 +1,27 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  SONAR_PROJECTKEY: 'azure-the-test'
+  SONAR_HOST_URL: $(SONAR_HOST_URL)
+  SONAR_TOKEN: $(SONAR_TOKEN)
+
+steps:
+- checkout: self
+  displayName: 'Checkout Source'
+
+- task: Docker@2
+  inputs:
+    command: 'pull'
+    container: 'blacklocksec/code-scanner:latest'
+  displayName: 'Pull Blacklock Code Scanner Docker Image'
+
+- script: |
+    docker run --rm -v $(Build.SourcesDirectory):/app -e SONAR_PROJECTKEY=$(SONAR_PROJECTKEY) -e SONAR_HOST_URL=$(SONAR_HOST_URL) -e SONAR_TOKEN=$(SONAR_TOKEN) blacklocksec/code-scanner:latest
+  displayName: 'Run Blacklock Code Scanner'
+  env:
+    SONAR_HOST_URL: $(SONAR_HOST_URL)
+    SONAR_TOKEN: $(SONAR_TOKEN)
