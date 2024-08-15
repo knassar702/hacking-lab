@@ -16,7 +16,7 @@ steps:
 - task: Docker@2
   inputs:
     command: 'pull'
-    container: 'blacklocksec/code-scanner:latest'
+    imageName: 'blacklocksec/code-scanner:latest'
   displayName: 'Pull Blacklock Code Scanner Docker Image'
 
 - script: |
